@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bus Pass</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #0f172a;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            position: relative;
+            height: 95vh; /* fill phone nicely */
+        }
+
+        img {
+            height: 100%;
+            width: auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        /* 🔲 Overlay positioned exactly on number */
+        .overlay {
+            position: absolute;
+            top: 74%;  /* 🔥 adjusted based on your image */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+            background: rgba(255, 255, 255, 0.85);
+            padding: 3px 10px;
+            border-radius: 6px;
+            backdrop-filter: blur(2px);
+        }
+
+        /* ✨ Blinking number */
+        .blink {
+            font-size: 17px; /* tuned to match */
+            font-weight: bold;
+            color: #7fbf7f; /* softer green like original */
+            text-shadow: 0 0 4px rgba(127,191,127,0.6);
+            animation: blinkAnim 1s infinite;
+        }
+
+        @keyframes blinkAnim {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <img src="your-image.jpg" alt="Bus Pass">
+
+    <div class="overlay">
+        <span class="blink">1234567890123</span>
+    </div>
+</div>
+
+</body>
+</html>
