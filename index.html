@@ -33,7 +33,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             
-            padding: 3px 32px; /* 👈 tighter fit */
+            padding: 3px 39px; /* 👈 tighter fit */
             
             /* smooth fade edges */
             background: radial-gradient(
@@ -46,11 +46,12 @@
 
         /* ✨ better sized blinking text */
         .blink {
-            font-size: 2.2vh; /* 🔥 scales with screen height */
+            font-size: 4vh; /* 🔥 scales with screen height */
             font-weight: bold;
             color: #76b37a;
             letter-spacing: 1px;
             animation: blinkAnim 1s infinite;
+            top: -3px; /* move text UP */
         }
 
         @keyframes blinkAnim {
