@@ -26,25 +26,29 @@
             border-radius: 10px;
         }
 
-        /* 🔲 overlay FIXED */
+        /* 🔲 PERFECTED overlay */
         .overlay {
             position: absolute;
-            top: 72%; /* 🔥 moved slightly UP */
+            top: 71.8%; /* 🔥 very fine tuned */
             left: 50%;
             transform: translate(-50%, -50%);
             
-            background: rgba(255, 255, 255, 0.95); /* 👈 more visible */
-            padding: 6px 14px;
-            border-radius: 6px;
+            padding: 2px 8px; /* 👈 tighter fit */
             
-            border: 1px solid rgba(0,0,0,0.1); /* subtle edge */
+            /* smooth fade edges */
+            background: radial-gradient(
+                ellipse at center,
+                rgba(255,255,255,0.95) 60%,
+                rgba(255,255,255,0.6) 80%,
+                rgba(255,255,255,0) 100%
+            );
         }
 
-        /* ✨ blinking number FIXED */
+        /* ✨ better sized blinking text */
         .blink {
-            font-size: 20px; /* 🔥 increased size */
+            font-size: 2.2vh; /* 🔥 scales with screen height */
             font-weight: bold;
-            color: #76b37a; /* closer to original */
+            color: #76b37a;
             letter-spacing: 1px;
             animation: blinkAnim 1s infinite;
         }
