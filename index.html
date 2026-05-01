@@ -16,7 +16,7 @@
 
         .container {
             position: relative;
-            height: 95vh; /* fill phone nicely */
+            height: 95vh;
         }
 
         img {
@@ -26,25 +26,26 @@
             border-radius: 10px;
         }
 
-        /* 🔲 Overlay positioned exactly on number */
+        /* 🔲 overlay FIXED */
         .overlay {
             position: absolute;
-            top: 74%;  /* 🔥 adjusted based on your image */
+            top: 72%; /* 🔥 moved slightly UP */
             left: 50%;
             transform: translate(-50%, -50%);
             
-            background: rgba(255, 255, 255, 0.85);
-            padding: 3px 10px;
+            background: rgba(255, 255, 255, 0.95); /* 👈 more visible */
+            padding: 6px 14px;
             border-radius: 6px;
-            backdrop-filter: blur(2px);
+            
+            border: 1px solid rgba(0,0,0,0.1); /* subtle edge */
         }
 
-        /* ✨ Blinking number */
+        /* ✨ blinking number FIXED */
         .blink {
-            font-size: 17px; /* tuned to match */
+            font-size: 20px; /* 🔥 increased size */
             font-weight: bold;
-            color: #7fbf7f; /* softer green like original */
-            text-shadow: 0 0 4px rgba(127,191,127,0.6);
+            color: #76b37a; /* closer to original */
+            letter-spacing: 1px;
             animation: blinkAnim 1s infinite;
         }
 
